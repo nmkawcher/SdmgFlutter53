@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sdmgflutter53/list_view_example.dart';
 import 'package:sdmgflutter53/profile_ui.dart';
+
+import 'listview_builder_example.dart';
 
 void main(){
   runApp(MyApp());
@@ -16,10 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple
       ),
-      home: ProfileUi(),
+      home: MyListViewBuilder(
+      ),
     );
   }
 }
+
+
 
 /*class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
