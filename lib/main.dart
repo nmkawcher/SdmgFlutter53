@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sdmgflutter53/e_commerce_single_product_design.dart';
 import 'package:sdmgflutter53/list_view_example.dart';
 import 'package:sdmgflutter53/profile_ui.dart';
 
@@ -19,8 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple
       ),
-      home: MyListViewBuilder(
-      ),
+
+        home: MyListViewBuilder(),
+
     );
   }
 }
