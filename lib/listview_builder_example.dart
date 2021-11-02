@@ -69,7 +69,9 @@ class MyListViewBuilder extends StatelessWidget {
                         SizedBox(
                           height: 10,
                         ),
-                        IconButton(iconSize:20,padding:EdgeInsets.all(0),onPressed: (){}, icon: Icon(Icons.delete_forever,color: Colors.red,))
+                        Align(
+                          alignment: Alignment.centerRight,
+                            child: IconButton(iconSize:20,padding:EdgeInsets.all(0),onPressed: (){}, icon: Icon(Icons.delete_forever,color: Colors.red,)))
                       ],
                     )
 

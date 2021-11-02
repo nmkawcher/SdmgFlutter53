@@ -6,6 +6,21 @@ class LisViewExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //receive
+      // var value = ModalRoute.of(context).settings.arguments as Map<String,Object>;
+      //show value['id']
+
+      //sending
+      //routes: {'/contact': (ctx) => Contact()},
+      //Navigator.of(context).pushNamed(
+      //                 '/contact',
+      //                 arguments: {
+      //                   'id':1,
+      //                   'name':"abc",
+      //
+      //
+      //                 },
+
       child: ListView(
         children: [
           myContainer(),

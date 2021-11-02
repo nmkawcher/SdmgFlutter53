@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sdmgflutter53/e_commerce_single_product_design.dart';
 import 'package:sdmgflutter53/list_view_example.dart';
+import 'package:sdmgflutter53/messenger_ui.dart';
 import 'package:sdmgflutter53/profile_ui.dart';
+import 'package:sdmgflutter53/route_example/first_page.dart';
+import 'package:sdmgflutter53/routes.dart';
+import 'package:sdmgflutter53/routes1.dart';
 
 import 'listview_builder_example.dart';
 
@@ -20,8 +24,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple
       ),
+     // routes: {'/contact': (ctx) => Contact()},
 
-        home: MyListViewBuilder(),
+     /* initialRoute: FirstPage.routesName,
+       routes: routes,*/
+      initialRoute: FirstPage.routesName,
+     routes: routes1,
+     /* home: FirstPage(),*/
 
     );
   }
