@@ -6,6 +6,7 @@ import 'package:sdmgflutter53/profile_ui.dart';
 import 'package:sdmgflutter53/route_example/first_page.dart';
 import 'package:sdmgflutter53/routes.dart';
 import 'package:sdmgflutter53/routes1.dart';
+import 'package:sdmgflutter53/text_field/simple_text_field_example.dart';
 
 import 'listview_builder_example.dart';
 
@@ -28,9 +29,9 @@ class MyApp extends StatelessWidget {
 
      /* initialRoute: FirstPage.routesName,
        routes: routes,*/
-      initialRoute: FirstPage.routesName,
-     routes: routes1,
-     /* home: FirstPage(),*/
+      /*initialRoute: FirstPage.routesName,
+     routes: routes1,*/
+      home: SimpleTextFieldExample(),
 
     );
   }
