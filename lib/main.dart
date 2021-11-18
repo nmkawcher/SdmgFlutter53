@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sdmgflutter53/e_commerce_single_product_design.dart';
+import 'package:sdmgflutter53/future_async_await_example/async_operation_example.dart';
 import 'package:sdmgflutter53/list_view_example.dart';
+import 'package:sdmgflutter53/media_query/login_page.dart';
+import 'package:sdmgflutter53/media_query/media_query_example.dart';
 import 'package:sdmgflutter53/messenger_ui.dart';
 import 'package:sdmgflutter53/profile_ui.dart';
 import 'package:sdmgflutter53/route_example/first_page.dart';
@@ -10,7 +13,7 @@ import 'package:sdmgflutter53/text_field/simple_text_field_example.dart';
 
 import 'listview_builder_example.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -23,21 +26,62 @@ class MyApp extends StatelessWidget {
       title: "Title",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.purple
-      ),
-     // routes: {'/contact': (ctx) => Contact()},
+          primarySwatch: Colors.purple,
+          primaryColor: Colors.deepOrange,
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange)
+              .copyWith(secondary: Colors.green),
+          secondaryHeaderColor: Colors.white,
+          splashColor: Colors.white,
+          accentColor: Colors.deepOrange,
+          scaffoldBackgroundColor: Colors.blue,
+          textTheme: TextTheme(
+            bodyText1: TextStyle(color: Colors.white, fontSize: 20),
+            headline1:
+                TextStyle(color: Theme.of(context).accentColor, fontSize: 20),
+            headline2:
+                TextStyle(color: Theme.of(context).primaryColor, fontSize: 22),
+          )),
+      // routes: {'/contact': (ctx) => Contact()},
 
-     /* initialRoute: FirstPage.routesName,
+      /* initialRoute: FirstPage.routesName,
        routes: routes,*/
       /*initialRoute: FirstPage.routesName,
      routes: routes1,*/
-      home: SimpleTextFieldExample(),
-
+      home: LoginPage(),
     );
   }
 }
 
+class ThemeExample extends StatelessWidget {
+  const ThemeExample({Key? key}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "This is an appBar",
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+      body: Center(
+        child: Text(
+          "Center text",
+          style: Theme.of(context)
+              .textTheme
+              .bodyText1!
+              .copyWith(color: Colors.deepOrange),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor:
+            Theme.of(context).copyWith(accentColor: Colors.blue).accentColor,
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
+    );
+  }
+}
 
 /*class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -52,14 +96,14 @@ class MyApp extends StatelessWidget {
             width: double.infinity,
             color: Colors.greenAccent,
           ),
-          *//*  Container(
+          */ /*  Container(
               height: 420,
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30)),
                 color: Colors.white
               ),
-            ),*//*
+            ),*/ /*
           Container(
             alignment: Alignment.topRight,
             height: 300,
@@ -97,13 +141,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }*/
-
-
-
-
-
-
-
 
 /*class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
