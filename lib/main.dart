@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sdmgflutter53/e_commerce_single_product_design.dart';
 import 'package:sdmgflutter53/future_async_await_example/async_operation_example.dart';
+import 'package:sdmgflutter53/http_example/http_example.dart';
 import 'package:sdmgflutter53/list_view_example.dart';
 import 'package:sdmgflutter53/media_query/login_page.dart';
 import 'package:sdmgflutter53/media_query/media_query_example.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
        routes: routes,*/
       /*initialRoute: FirstPage.routesName,
      routes: routes1,*/
-      home: LoginPage(),
+      home: HttpExample(),
     );
   }
 }

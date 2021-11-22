@@ -63,7 +63,8 @@ class Body extends StatelessWidget {
               TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(30)
+                    ),
                     prefixIcon: Icon(Icons.lock),
                     hintText: "ex.12gg",
                     labelText: "Password",
@@ -71,22 +72,25 @@ class Body extends StatelessWidget {
                     suffixIcon: Icon(Icons.visibility)),
                 obscureText: true,
               ),
-              SizedBox(height: 20,),
-              Align(
-                alignment:Alignment.centerRight,
-                child: Text("Forget Password",style: TextStyle(
-                  color: Colors.blue,
-                  fontWeight: FontWeight.bold,
-                ),),
-              ),
-              ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Login")
-              ),
               SizedBox(
                 height: 20,
               ),
-              Text("Don't have an account?\nRegister",textAlign: TextAlign.center)
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  "Forget Password",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              ElevatedButton(onPressed: () {}, child: Text("Login")),
+              SizedBox(
+                height: 20,
+              ),
+              Text("Don't have an account?\nRegister",
+                  textAlign: TextAlign.center)
             ],
           ),
         ),
