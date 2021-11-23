@@ -108,7 +108,8 @@ class _HttpExampleState extends State<HttpExample> {
                       );
                     }
                 );
-              } else if (snapshot.hasError) {
+              }
+              else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
               }
 
